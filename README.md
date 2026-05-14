@@ -13,3 +13,14 @@ Provide the references that you have used to support your assignment.
 
 Link to the Web Application:
 https://lunchmoney.app/
+
+## Overview
+This is a simple Personal Budget Manager Node module to help users track their income and expenses.
+This Node module consists of 5 functions.
+
+## Function 1: addIncome(amount, description)
+*This function adds Income
+
+There are two things you need to fill in: 
+1. amount - how much money you have earned
+2. description - where the income is from (E.g addIncome(5000, 'Salary')*  
