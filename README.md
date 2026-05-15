@@ -1,6 +1,6 @@
 # Assignment 1
 
-# References
+## References
 Link to the Web Application:
 https://lunchmoney.app/
 
