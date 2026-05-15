@@ -1,7 +1,7 @@
 // Personal Budget Manager Node Module
 let transactions = [
     { id: 1, type: 'income', amount: 4500, category: 'Salary', desc: 'Monthly Salary' },
-    { id: 2, type: 'expense', amount: 1013.99, category: 'Home & Auto', desc: 'Rent' },
+    { id: 2, type: 'expense', amount: 103.99, category: 'Utility Bills', desc: 'Rent' },
     { id: 3, type: 'expense', amount: 144.40, category: 'Food', desc: 'Groceries' }
 ];
 
@@ -10,12 +10,13 @@ let idCounter = 4;
 // Functions
 
 // 1. Add Income
-function addIncome(amount, description) {
+function addIncome(amount, description, category) {
     transactions.push({
         id: idCounter++,
         type: 'income',
         amount: amount,
-        description: description
+        description: description,
+        category: category
     });
     return "Income added successfully";
 }
@@ -64,18 +65,18 @@ function filterExpensesByCategory(category) {
 // 5. Get Summary
 function getSummary() {
     let totalIncome = 0;
-    let totalExpenses = 0;
+    let totalExpense = 0;
 
     for (let i = 0; i < transactions.length; i++) {
         let item = transactions[i];
         if (item.type === 'income') totalIncome += item.amount;
-        if (item.type === 'expense') totalExpenses += item.amount;
+        if (item.type === 'expense') totalExpense += item.amount;
     }
 
     return {
         totalIncome: totalIncome,
-        totalExpenses: totalExpenses,
-        balance: totalIncome - totalExpenses
+        totalExpenses: totalExpense,
+        balance: totalIncome - totalExpense
     };
 }
 
