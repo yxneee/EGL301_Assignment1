@@ -18,17 +18,15 @@ https://lunchmoney.app/
 This is a simple Personal Budget Manager Node module to help users track their income and expenses.
 This Node module consists of 5 functions.
 
----
-
 ## Function 1: addIncome(amount, description)
 This function adds an Income.
 
-There are 2 things that you need to fill in: 
+There are 3 things that you need to fill in: 
 1. amount - how much money you have earned
 2. description - where the income is from
 3. category - type of income like Salary
 
-Example: addIncome(2000, "Salary", "Part-time Job")
+---
 
 ## Function 2: addExpense(amount, description, category)
 This function adds an expense.
@@ -38,17 +36,27 @@ There are 3 things that you need to fill in:
 2. description - what you have spent the money on
 3. category - type of expense like Food, Transport
 
-Example: addExpense(100, "Electricity Bill", "Utility Bills")
+---
 
 ## Function 3: getBalance()
 This function calculates your currrent balance.
 It takes all of your income to subtract all of your expenses, and returns the remaining amount of money left.
 No input is needed.
 
-## Function 4: filterExpensesByCategory(category)
+---
+
+## Function 4: getAllIncome()
+This function returns a list displaying only your income.
+No input is needed.
+
+---
+
+## Function 5: filterExpensesByCategory(category)
 This function only shows you expenses from the category you have selected, like Food or Transport.
 You just need to enter the category you want to see.
 
-## Function 5: getSummary()
+---
+
+## Function 6: getSummary()
 This function gives you a full report consisting of: total income, total expenses and final balance.
 No input is needed. The function will return all 3 values.
