@@ -50,7 +50,19 @@ function getBalance() {
     return totalIncome - totalExpenses;
 }
 
-// 4. Filter Expenses By Category
+// 4. Get All Income
+function getAllIncome() {
+    let incomeList = [];
+    for (let i = 0; i < transactions.length; i++) {
+        let item = transactions[i];
+        if (item.type === 'income') {
+            incomeList.push(item);
+        }
+    }
+    return incomeList;
+}
+
+// 5. Filter Expenses By Category
 function filterExpensesByCategory(category) {
     let result = [];
     for (let i = 0; i < transactions.length; i++) {
@@ -62,7 +74,7 @@ function filterExpensesByCategory(category) {
     return result;
 }
 
-// 5. Get Summary
+// 6. Get Summary
 function getSummary() {
     let totalIncome = 0;
     let totalExpense = 0;
@@ -86,6 +98,7 @@ module.exports = {
     addExpense,
     getBalance,
     filterExpensesByCategory,
+    getAllIncome,
     getSummary,
     transactions
 };
